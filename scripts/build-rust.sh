@@ -10,6 +10,7 @@ esac
 
 # BUILD
 cargo build --release
+npm install
 mkdir -p dist/native
 
 # COPY
