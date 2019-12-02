@@ -73,6 +73,9 @@ Just use the GitHub issue tracker for this project.
 
 ## Other Miscellaneous
 
+### Self Contained
+Our npm releases contain prebuilt native node libraries (i.e. the *rust* code). With eventual plans for WASM support.
+
 ### Articles
 
 * [Modern Image Optimization for 2020 - Issues, Solutions, and Open Source Solutions](https://medium.com/@colbyn/modern-image-optimization-for-2020-issues-solutions-and-open-source-solutions-543af00e3e51)
