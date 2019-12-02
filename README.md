@@ -1,12 +1,28 @@
-# Imager
-> Brute force image optimization; optimizes the compression using ML based metrics in a trial ’n error sorta manner.
+# Imager <small><em>for JavaScript</em></small>
 
-## About
+## Features
+
+### Brute Force Image Optimization
+
+> Optimizes the compression using ML based metrics in a trial ’n error sorta manner.
 
 This is a tool that can competitively optimize (e.g.) extremely noisy, high resolution images; at the expense of increased encoding time and CPU overhead. This is a tradeoff that should be suitable for over 90% of online content, where site performance matters.
 
+It's pretty easy too.
 
-## [Benchmarks](https://github.com/colbyn/imager-bench-2019-11-2)
+<small>Using the JavaScript non-blocking API:</small>
+
+```javascript
+const {ImageBuffer} = require("imager-io");
+ImageBuffer
+	.open("source-image.jpeg")
+	.then(buffer => buffer.opt())
+	.then(buffer => buffer.save("result.jpeg"))
+	.then(() => console.log("done"));
+```
+
+
+## [Compression Benchmarks](https://github.com/colbyn/imager-bench-2019-11-2)
 
 ```text
 source        : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 39.00M (4 images)
@@ -15,8 +31,6 @@ jpegmini.com  : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 16M
 compression.ai: ▇▇▇▇▇▇▇▇ 8.90M
 imager        : ▇▇▇▇ 4.20M
 ```
-
-## Status - Fundamental
 
 ### Supported **Input** Image Formats
 
@@ -41,56 +55,12 @@ Essentially supports any image decodable by [image-rs](https://github.com/i
 | ------ | -------- |
 | JPEG   | progressive |
 
-For now, support will pretty much just correspond to whats popularly available in browsers. I’m considering `WebP` for the next supported codec.
-
-## Status - Ecosystem
-
-### Supported Operating Systems
-
-| OS     | Current Status |
-| ------ | -------- |
-| Linux   | ✅ [GOOD] |
-| MacOS   | ✅ [GOOD] |
-| Windows   | ❌ [UNPRIORITIZED] |
-
-### Supported Languages
-
-| Name | Status | Links | Self Contained (i.e. no sys deps) |
-| ------ | -------- | -------- | -------- |
-| Rust   | ✅ [GOOD] | [crates](https://crates.io/crates/imager) | NO |
-| NodeJS   | ✅ [GOOD] | [npm](https://www.npmjs.com/package/imager-io) - [example](https://git.io/Jeo6e) | YES |
-
-### Supported Dev Tools
-
-| Name | Status |
-| ------ | -------- |
-| Webpack   | ❎ [IN-PROCESS] |
-
 #### Webpack
 
 It’s possible and pretty easy to use Webpack and Imager already, [here is an example](https://github.com/imager-io/webpack-imager-example-vanilla).
 
-### Supported Bins
-
-| Name                     | Status    | Description                 |
-| -                        | -         | -                           |
-| `imager-cli` or `imager` | ✅ [GOOD] | The Imager CLI Interface    |
-| `imager-server`   	   | ✅ [GOOD] | The Imager Server Interface |
-
-#### [Download & Install](https://github.com/imager-io/imager/releases)
-
-Prebuilt binaries can be found [here](https://github.com/imager-io/imager/releases).
-
-## Objective
-Nothing short of becoming *the industry standard* for image optimization! :)
-
-More concretely. Expose a uniform interface for image transcoding and optimization of popular codecs. Based on off-the-shelf encoders, akin to FFmpeg. With support predominately concerned with lossy codecs.
-
-## Feedback & Feature Requests
+## Feedback, Requests, Bugs, Confusion & Performance Issues
 Just use the GitHub issue tracker for this project.
-
-## Bugs, Confusion, Performance Issues
-Just use the GitHub issue form.
 
 ## Other Miscellaneous
 
