@@ -10,6 +10,10 @@ This is a tool that can competitively optimize (e.g.) extremely noisy, high reso
 
 It's pretty easy too.
 
+```shell
+$ npm install --save imager-io
+```
+
 <small>Using the JavaScript non-blocking API:</small>
 
 ```javascript
