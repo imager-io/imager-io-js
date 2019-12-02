@@ -1,5 +1,10 @@
 # Imager <small><em>for JavaScript</em></small>
 
+* [Source](https://github.com/imager-io/imager-io-js)
+* [NPM](https://www.npmjs.com/package/imager-io)
+* [Example](https://git.io/Jeo6e)
+* [Documentation](https://github.com/imager-io/imager-io-js/blob/master/docs/imager-nodejs.md)
+
 ## Features
 
 ### Brute Force Image Optimization
