@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/imager-io/imager"
+    "url": "https://github.com/imager-io/imager-io-js"
   },
   "description": "[Official] Brute force image optimization.",
   "keywords": [
@@ -13,7 +13,7 @@
     "compression"
   ],
   "license": "MPL-2.0",
-  "homepage": "https://github.com/imager-io/imager",
+  "homepage": "https://imager.io",
   "scripts": {
     "build:rust": "./scripts/build-rust.sh",
     "build:ts": "./node_modules/.bin/babel lib --out-dir dist --extensions '.ts','.js'",
