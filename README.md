@@ -64,6 +64,14 @@ Essentially supports any image decodable by [image-rs](https://github.com/i
 | ------ | -------- |
 | JPEG   | progressive |
 
+### Supported Operating Systems
+
+| OS     | Current Status |
+| ------ | -------- |
+| Linux   | ✅ [GOOD] |
+| MacOS   | ✅ [GOOD] |
+| Windows   | ❌ [UNPRIORITIZED] (Use WSL) |
+
 #### Webpack
 
 It’s possible and pretty easy to use Webpack and Imager already, [here is an example](https://github.com/imager-io/webpack-imager-example-vanilla).
